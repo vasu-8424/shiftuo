@@ -71,19 +71,19 @@ export default function AnimatedGridBackground({
           initial={{ x: '-100%' }}
           animate={{ x: '100%' }}
           transition={{ duration: 12, repeat: Infinity, ease: 'linear' }}
-          className="absolute top-1/4 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"
+          className="absolute top-1/4 left-0 right-0 h-[1px] bg-black  /20 "
         />
         <motion.div 
           initial={{ y: '-100%' }}
           animate={{ y: '100%' }}
           transition={{ duration: 15, repeat: Infinity, ease: 'linear', delay: 3 }}
-          className="absolute top-0 bottom-0 left-1/3 w-[1px] bg-gradient-to-b from-transparent via-white/15 to-transparent"
+          className="absolute top-0 bottom-0 left-1/3 w-[1px] bg-black  /15 "
         />
         <motion.div 
           initial={{ x: '100%' }}
           animate={{ x: '-100%' }}
           transition={{ duration: 18, repeat: Infinity, ease: 'linear', delay: 5 }}
-          className="absolute bottom-1/3 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"
+          className="absolute bottom-1/3 left-0 right-0 h-[1px] bg-black  /10 "
         />
       </div>
 
@@ -96,8 +96,8 @@ export default function AnimatedGridBackground({
       />
 
       {/* High-fidelity ambient organic shapes */}
-      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-white/[0.02] rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-1/3 left-1/4 w-96 h-96 bg-white/[0.01] rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-white/[0.02] rounded-none blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-1/3 left-1/4 w-96 h-96 bg-white/[0.01] rounded-none blur-[120px] pointer-events-none" />
     </div>
   );
 }

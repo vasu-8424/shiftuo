@@ -54,7 +54,7 @@ export default function FAQ() {
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="text-[11px] font-extrabold uppercase tracking-widest text-white bg-white/10 px-3 py-1.5 rounded-full inline-flex items-center gap-1.5 border border-white/10">
+          <span className="text-[11px] font-extrabold uppercase tracking-widest text-white bg-white/10 px-3 py-1.5 rounded-none inline-flex items-center gap-1.5 border border-white/10">
             <HelpCircle className="h-4 w-4 text-white" />
             FREQUENTLY ASKED QUESTIONS
           </span>
@@ -73,7 +73,7 @@ export default function FAQ() {
             return (
               <div 
                 key={idx}
-                className="bg-[#050505]/95 border border-neutral-800 rounded-2xl overflow-hidden transition-all duration-300"
+                className="bg-[#050505]/95 border border-neutral-800 rounded-none overflow-hidden transition-all duration-300"
               >
                 <button
                   onClick={() => toggleItem(idx)}
@@ -83,7 +83,7 @@ export default function FAQ() {
                   <span className="font-display font-extrabold text-sm sm:text-base text-white tracking-tight">
                     {faq.question}
                   </span>
-                  <span className="p-1 bg-neutral-900 border border-neutral-850 rounded-lg text-white shrink-0">
+                  <span className="p-1 bg-neutral-900 border border-neutral-850 rounded-none text-white shrink-0">
                     {isOpen ? <ChevronUp className="h-4 w-4 text-white" /> : <ChevronDown className="h-4 w-4" />}
                   </span>
                 </button>

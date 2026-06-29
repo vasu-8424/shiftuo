@@ -45,8 +45,8 @@ export default function CertificatePreview() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="text-[11px] font-extrabold uppercase tracking-widest text-white bg-white/10 px-3 py-1.5 rounded-full inline-flex items-center gap-1.5 border border-white/10">
-            <ShieldCheck className="h-4 w-4 text-emerald-400" />
+          <span className="text-[11px] font-extrabold uppercase tracking-widest text-white bg-white/10 px-3 py-1.5 rounded-none inline-flex items-center gap-1.5 border border-white/10">
+            <ShieldCheck className="h-4 w-4 text-black" />
             ISO & NASSCOM COMPLIANT
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-white mt-4 tracking-tight leading-tight">
@@ -62,7 +62,7 @@ export default function CertificatePreview() {
           
           {/* Settings Column */}
           <div className="lg:col-span-4 space-y-6">
-            <div className="bg-[#050505]/95 border border-neutral-800 p-6 sm:p-7 rounded-3xl space-y-5">
+            <div className="bg-[#050505]/95 border border-neutral-800 p-6 sm:p-7 rounded-none space-y-5">
               <h4 className="text-sm font-black text-white uppercase tracking-wider border-b border-neutral-950 pb-2.5 flex items-center gap-2">
                 <Sparkles className="h-4.5 w-4.5 text-white animate-spin" />
                 CUSTOMIZE PREVIEW
@@ -79,7 +79,7 @@ export default function CertificatePreview() {
                   value={recipientName}
                   onChange={(e) => setRecipientName(e.target.value)}
                   placeholder="Enter full name"
-                  className="w-full px-4 py-3 bg-black border border-neutral-850 rounded-xl text-sm font-semibold text-white focus:outline-none focus:border-white transition-colors"
+                  className="w-full px-4 py-3 bg-black border border-neutral-850 rounded-none text-sm font-semibold text-white focus:outline-none focus:border-white transition-colors"
                   id="cert-input-name"
                 />
               </div>
@@ -92,7 +92,7 @@ export default function CertificatePreview() {
                 <select
                   value={selectedCourse}
                   onChange={(e) => setSelectedCourse(e.target.value)}
-                  className="w-full px-4 py-3 bg-black border border-neutral-850 rounded-xl text-sm font-semibold text-white focus:outline-none focus:border-white transition-colors cursor-pointer"
+                  className="w-full px-4 py-3 bg-black border border-neutral-850 rounded-none text-sm font-semibold text-white focus:outline-none focus:border-white transition-colors cursor-pointer"
                   id="cert-select-course"
                 >
                   {courses.map((course) => (
@@ -106,7 +106,7 @@ export default function CertificatePreview() {
               <button
                 onClick={triggerGenerate}
                 disabled={isGenerating}
-                className="w-full py-3.5 bg-white text-black hover:bg-neutral-200 disabled:bg-neutral-800 text-xs font-bold uppercase tracking-wider rounded-xl transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full py-3.5 bg-white text-black hover:bg-neutral-200 disabled:bg-neutral-800 text-xs font-bold uppercase tracking-wider rounded-none transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
                 id="btn-cert-generate"
               >
                 <RefreshCw className={`h-4 w-4 ${isGenerating ? 'animate-spin' : ''}`} />
@@ -117,19 +117,19 @@ export default function CertificatePreview() {
             {/* Validation Checkpoints */}
             <div className="space-y-3.5">
               <div className="flex items-start gap-3 text-xs leading-relaxed text-neutral-400">
-                <CheckCircle2 className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
+                <CheckCircle2 className="h-5 w-5 text-black shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-white font-bold">Secure QR Validation:</strong> Scan the integrated QR block to verify certification legitimacy instantly on the ShiftUP portal.
                 </div>
               </div>
               <div className="flex items-start gap-3 text-xs leading-relaxed text-neutral-400">
-                <CheckCircle2 className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
+                <CheckCircle2 className="h-5 w-5 text-black shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-white font-bold">Lifetime Digital Access:</strong> Stored securely inside our blockchain ledger database with permanent query access.
                 </div>
               </div>
               <div className="flex items-start gap-3 text-xs leading-relaxed text-neutral-400">
-                <CheckCircle2 className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
+                <CheckCircle2 className="h-5 w-5 text-black shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-white font-bold">NASSCOM & NSDC Endorsement:</strong> Aligned directly under the National Skills Qualification Framework metrics.
                 </div>
@@ -139,7 +139,7 @@ export default function CertificatePreview() {
 
           {/* Canvas Certificate Column */}
           <div className="lg:col-span-8 flex justify-center">
-            <div className="relative w-full max-w-[640px] aspect-[1.414/1] bg-black border-[12px] border-double border-neutral-800 p-6 sm:p-10 shadow-2xl flex flex-col justify-between overflow-hidden rounded-md select-none">
+            <div className="relative w-full max-w-[640px] aspect-[1.414/1] bg-black border-[12px] border-double border-neutral-800 p-6 sm:p-10 shadow-2xl flex flex-col justify-between overflow-hidden rounded-none select-none">
               
               {/* Gold / White flourish corners */}
               <div className="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-neutral-700" />
@@ -189,7 +189,7 @@ export default function CertificatePreview() {
 
                 {/* Secure Hologram Stamp */}
                 <div className="flex justify-center relative">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-tr from-neutral-900 via-neutral-600 to-neutral-950 p-0.5 shadow-md flex items-center justify-center text-white relative border border-neutral-800">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-none bg-black    p-0.5 shadow-md flex items-center justify-center text-white relative border border-neutral-800">
                     <Award className="h-6 w-6 sm:h-8 sm:s-8 animate-pulse text-white/40" />
                     <span className="absolute text-[6px] sm:text-[8px] font-extrabold tracking-widest text-neutral-400 select-none">
                       SHIFTUP

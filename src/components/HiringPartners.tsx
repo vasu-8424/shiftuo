@@ -26,7 +26,7 @@ export default function HiringPartners() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <p className="text-xs font-extrabold uppercase tracking-widest text-neutral-400 mb-6 flex items-center justify-center gap-2">
-          <Sparkles className="h-3 w-3 text-emerald-400 animate-pulse" />
+          <Sparkles className="h-3 w-3 text-black animate-pulse" />
           OUR ALUMNI ARE RECRUITED BY INDUSTRY TITANS
         </p>
 
@@ -36,12 +36,12 @@ export default function HiringPartners() {
             {[...partners, ...partners, ...partners].map((partner, index) => (
               <div 
                 key={`${partner.name}-r1-${index}`}
-                className="flex items-center gap-3 bg-[#0a0a0a]/80 border border-neutral-800 px-6 py-3.5 rounded-2xl shadow-sm hover:border-neutral-700 transition-all duration-300 min-w-[170px]"
+                className="flex items-center gap-3 bg-[#0a0a0a]/80 border border-neutral-800 px-6 py-3.5 rounded-none shadow-sm hover:border-neutral-700 transition-all duration-300 min-w-[170px]"
               >
                 {partner.logo.startsWith('http') && partner.logo.includes('devicon') ? (
                   <img src={partner.logo} alt={partner.name} className="h-6 w-6 object-contain invert opacity-60" referrerPolicy="no-referrer" />
                 ) : (
-                  <div className="w-6 h-6 rounded-lg bg-neutral-900 flex items-center justify-center text-[10px] font-black text-neutral-400">
+                  <div className="w-6 h-6 rounded-none bg-neutral-900 flex items-center justify-center text-[10px] font-black text-neutral-400">
                     {partner.name[0]}
                   </div>
                 )}
@@ -59,12 +59,12 @@ export default function HiringPartners() {
             {[...partners, ...partners, ...partners].reverse().map((partner, index) => (
               <div 
                 key={`${partner.name}-r2-${index}`}
-                className="flex items-center gap-3 bg-[#0a0a0a]/80 border border-neutral-800 px-6 py-3.5 rounded-2xl shadow-sm hover:border-neutral-700 transition-all duration-300 min-w-[170px]"
+                className="flex items-center gap-3 bg-[#0a0a0a]/80 border border-neutral-800 px-6 py-3.5 rounded-none shadow-sm hover:border-neutral-700 transition-all duration-300 min-w-[170px]"
               >
                 {partner.logo.startsWith('http') && partner.logo.includes('devicon') ? (
                   <img src={partner.logo} alt={partner.name} className="h-6 w-6 object-contain invert opacity-60" referrerPolicy="no-referrer" />
                 ) : (
-                  <div className="w-6 h-6 rounded-lg bg-neutral-900 flex items-center justify-center text-[10px] font-black text-neutral-400">
+                  <div className="w-6 h-6 rounded-none bg-neutral-900 flex items-center justify-center text-[10px] font-black text-neutral-400">
                     {partner.name[0]}
                   </div>
                 )}

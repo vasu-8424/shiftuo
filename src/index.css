@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
-  --font-display: "Sora", system-ui, -apple-system, sans-serif;
+  --font-display: "Dancing Script", cursive, sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 
-  --color-brand-primary: #2563EB;
-  --color-brand-secondary: #0EA5E9;
-  --color-brand-accent: #10B981;
-  --color-brand-dark: #0F172A;
-  --color-brand-bg: #F8FAFC;
+  --color-brand-primary: #000000;
+  --color-brand-secondary: #333333;
+  --color-brand-accent: #666666;
+  --color-brand-dark: #000000;
+  --color-brand-bg: #FFFFFF;
   
   --animate-marquee: marquee 30s linear infinite;
   --animate-marquee-reverse: marquee-reverse 30s linear infinite;
@@ -40,11 +40,15 @@
 html {
   scroll-behavior: smooth;
   background-color: var(--color-brand-bg);
-  color: #1E293B;
+  color: #000000;
   font-family: var(--font-sans);
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+}
+
+.font-cursive {
   font-family: var(--font-display);
 }
 
@@ -53,14 +57,14 @@ h1, h2, h3, h4, h5, h6 {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #F1F5F9;
+  background: #FFFFFF;
 }
 ::-webkit-scrollbar-thumb {
-  background: #CBD5E1;
+  background: #CCCCCC;
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #94A3B8;
+  background: #999999;
 }
 
 /* Custom UI styling helpers */
@@ -79,30 +83,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .text-glow {
-  text-shadow: 0 0 30px rgba(37, 99, 235, 0.4);
+  text-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
 }
 
 .glow-btn:hover {
-  box-shadow: 0 0 25px rgba(37, 99, 235, 0.45);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.45);
 }
 
 .glow-btn-accent:hover {
-  box-shadow: 0 0 25px rgba(16, 185, 129, 0.45);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.45);
 }
 
 .animated-bg-gradient {
-  background: radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.05) 0%, transparent 40%),
-              radial-gradient(circle at 90% 80%, rgba(14, 165, 233, 0.05) 0%, transparent 40%),
-              radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.03) 0%, transparent 50%);
+  background: radial-gradient(circle at 10% 20%, rgba(0, 0, 0, 0.05) 0%, transparent 40%),
+              radial-gradient(circle at 90% 80%, rgba(0, 0, 0, 0.05) 0%, transparent 40%),
+              radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.03) 0%, transparent 50%);
 }
 
 .glow-glow {
-  filter: drop-shadow(0px 0px 12px rgba(14, 165, 233, 0.3));
+  filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.3));
 }
 
 /* Custom Dot matrix pattern */
 .dot-grid {
-  background-image: radial-gradient(rgba(148, 163, 184, 0.15) 1.5px, transparent 1.5px);
+  background-image: radial-gradient(rgba(0, 0, 0, 0.15) 1.5px, transparent 1.5px);
   background-size: 24px 24px;
 }
 

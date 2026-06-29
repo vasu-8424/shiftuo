@@ -106,8 +106,8 @@ export default function StudentReviews() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-[11px] font-extrabold uppercase tracking-widest text-white bg-white/10 px-3 py-1.5 rounded-full inline-flex items-center gap-1.5 border border-white/10">
-            <Sparkles className="h-3.5 w-3.5 text-emerald-400" />
+          <span className="text-[11px] font-extrabold uppercase tracking-widest text-white bg-white/10 px-3 py-1.5 rounded-none inline-flex items-center gap-1.5 border border-white/10">
+            <Sparkles className="h-3.5 w-3.5 text-black" />
             STUDENT TALENT POOL
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-white mt-4 tracking-tight leading-tight">
@@ -128,7 +128,7 @@ export default function StudentReviews() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -50 }}
                 transition={{ duration: 0.4 }}
-                className="bg-[#0a0a0a]/80 p-6 sm:p-10 rounded-3xl shadow-lg border border-neutral-800 grid grid-cols-1 md:grid-cols-12 gap-8 items-center"
+                className="bg-[#0a0a0a]/80 p-6 sm:p-10 rounded-none shadow-lg border border-neutral-800 grid grid-cols-1 md:grid-cols-12 gap-8 items-center"
               >
                 {/* Student Avatar Column */}
                 <div className="md:col-span-4 flex flex-col items-center text-center">
@@ -136,10 +136,10 @@ export default function StudentReviews() {
                     <img 
                       src={reviewsData[activeSlide].avatar} 
                       alt={reviewsData[activeSlide].name}
-                      className="w-28 h-28 sm:w-36 sm:h-36 rounded-full object-cover border-4 border-neutral-800 shadow-md grayscale hover:grayscale-0 transition-all duration-300"
+                      className="w-28 h-28 sm:w-36 sm:h-36 rounded-none object-cover border-4 border-neutral-800 shadow-md grayscale hover:grayscale-0 transition-all duration-300"
                       referrerPolicy="no-referrer"
                     />
-                    <div className="absolute -bottom-2 right-2 bg-emerald-500 text-white p-1.5 rounded-full shadow-md">
+                    <div className="absolute -bottom-2 right-2 bg-black text-white p-1.5 rounded-none shadow-md">
                       <CheckCircle2 className="h-4 w-4" />
                     </div>
                   </div>
@@ -152,7 +152,7 @@ export default function StudentReviews() {
                   </p>
 
                   {/* Hire Badge */}
-                  <div className="mt-4 bg-neutral-950 border border-neutral-800 rounded-2xl px-4 py-2.5 leading-tight w-full">
+                  <div className="mt-4 bg-neutral-950 border border-neutral-800 rounded-none px-4 py-2.5 leading-tight w-full">
                     <span className="text-[10px] font-black text-neutral-500 uppercase tracking-widest block">HIRED BY</span>
                     <strong className="text-white font-display font-black text-base">{reviewsData[activeSlide].company}</strong>
                     <div className="text-xs font-bold text-neutral-400 mt-0.5">{reviewsData[activeSlide].salary}</div>
@@ -163,7 +163,7 @@ export default function StudentReviews() {
                 <div className="md:col-span-8 flex flex-col justify-between h-full space-y-4">
                   <div className="relative">
                     <Quote className="h-10 w-10 text-white/5 absolute -top-5 -left-4 select-none" />
-                    <span className="text-xs font-extrabold text-black bg-white px-2.5 py-1 rounded-md mb-3.5 inline-block">
+                    <span className="text-xs font-extrabold text-black bg-white px-2.5 py-1 rounded-none mb-3.5 inline-block">
                       {reviewsData[activeSlide].increase}
                     </span>
                     <p className="text-neutral-300 text-sm sm:text-base leading-relaxed font-light italic relative z-10">
@@ -174,7 +174,7 @@ export default function StudentReviews() {
                   <div className="flex flex-wrap items-center gap-4 pt-4 border-t border-neutral-900">
                     <button
                       onClick={() => handlePlayVideo(reviewsData[activeSlide])}
-                      className="px-5 py-2.5 bg-white text-black hover:bg-neutral-200 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors flex items-center gap-2 shadow-md cursor-pointer"
+                      className="px-5 py-2.5 bg-white text-black hover:bg-neutral-200 rounded-none text-xs font-bold uppercase tracking-wider transition-colors flex items-center gap-2 shadow-md cursor-pointer"
                       id={`btn-play-${reviewsData[activeSlide].id}`}
                     >
                       <Play className="h-3.5 w-3.5 fill-current" />
@@ -200,14 +200,14 @@ export default function StudentReviews() {
           <div className="flex justify-center gap-3 mt-6">
             <button
               onClick={handlePrev}
-              className="p-3 bg-[#0a0a0a] hover:bg-neutral-900 border border-neutral-800 rounded-full shadow-sm text-white transition-all cursor-pointer"
+              className="p-3 bg-[#0a0a0a] hover:bg-neutral-900 border border-neutral-800 rounded-none shadow-sm text-white transition-all cursor-pointer"
               id="rev-btn-prev"
             >
               <ChevronLeft className="h-5 w-5" />
             </button>
             <button
               onClick={handleNext}
-              className="p-3 bg-[#0a0a0a] hover:bg-neutral-900 border border-neutral-800 rounded-full shadow-sm text-white transition-all cursor-pointer"
+              className="p-3 bg-[#0a0a0a] hover:bg-neutral-900 border border-neutral-800 rounded-none shadow-sm text-white transition-all cursor-pointer"
               id="rev-btn-next"
             >
               <ChevronRight className="h-5 w-5" />
@@ -228,17 +228,17 @@ export default function StudentReviews() {
                 initial={{ scale: 0.95, y: 15 }}
                 animate={{ scale: 1, y: 0 }}
                 exit={{ scale: 0.95, y: 15 }}
-                className="bg-[#0a0a0a] border border-neutral-800 rounded-3xl shadow-2xl max-w-2xl w-full overflow-hidden text-white"
+                className="bg-[#0a0a0a] border border-neutral-800 rounded-none shadow-2xl max-w-2xl w-full overflow-hidden text-white"
               >
                 {/* Simulated Player Top Bar */}
                 <div className="bg-black px-5 py-3.5 border-b border-neutral-800 flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <span className="h-3 w-3 rounded-full bg-emerald-500 animate-pulse" />
+                    <span className="h-3 w-3 rounded-none bg-black animate-pulse" />
                     <span className="text-xs font-mono font-bold text-neutral-400">testifier_stream_h264_live.mp4</span>
                   </div>
                   <button 
                     onClick={closeVideoPlayer}
-                    className="p-1.5 hover:bg-neutral-950 text-neutral-400 hover:text-white rounded-lg transition-colors cursor-pointer"
+                    className="p-1.5 hover:bg-neutral-950 text-neutral-400 hover:text-white rounded-none transition-colors cursor-pointer"
                     id="btn-close-video"
                   >
                     <X className="h-5 w-5" />
@@ -249,20 +249,20 @@ export default function StudentReviews() {
                 <div className="aspect-video bg-black relative flex flex-col justify-between p-6 overflow-hidden">
                   
                   {/* Subtle video ambient grid */}
-                  <div className="absolute inset-0 bg-radial-gradient from-neutral-900/10 to-transparent opacity-50 pointer-events-none" />
+                  <div className="absolute inset-0 bg-radial-gradient /10  opacity-50 pointer-events-none" />
 
                   {/* Top corner watermark */}
-                  <div className="absolute top-4 right-4 bg-black/60 backdrop-blur px-2.5 py-1 rounded-md text-[9px] font-black tracking-widest text-white flex items-center gap-1.5 border border-white/10">
-                    <Monitor className="h-3 w-3 text-emerald-400 animate-pulse" />
+                  <div className="absolute top-4 right-4 bg-black/60 backdrop-blur px-2.5 py-1 rounded-none text-[9px] font-black tracking-widest text-white flex items-center gap-1.5 border border-white/10">
+                    <Monitor className="h-3 w-3 text-black animate-pulse" />
                     SHIFTUP PLACEMENT LEDGER
                   </div>
 
                   {/* Student Card overlay inside video */}
-                  <div className="mt-auto relative z-10 flex items-center gap-4 bg-black/80 backdrop-blur border border-white/10 p-4 rounded-2xl max-w-md">
+                  <div className="mt-auto relative z-10 flex items-center gap-4 bg-black/80 backdrop-blur border border-white/10 p-4 rounded-none max-w-md">
                     <img 
                       src={activeVideoReview.avatar} 
                       alt={activeVideoReview.name}
-                      className="w-12 h-12 rounded-full border border-neutral-800 object-cover"
+                      className="w-12 h-12 rounded-none border border-neutral-800 object-cover"
                       referrerPolicy="no-referrer"
                     />
                     <div className="leading-tight">
@@ -273,7 +273,7 @@ export default function StudentReviews() {
                   </div>
 
                   {/* Live Stream Transcript Text running overlay */}
-                  <div className="mt-4 bg-black/80 p-3 rounded-xl border border-white/5 relative z-10">
+                  <div className="mt-4 bg-black/80 p-3 rounded-none border border-white/5 relative z-10">
                     <p className="text-xs text-neutral-500 font-mono select-none uppercase tracking-widest text-[8px]">TRANSCRIPT FEED</p>
                     <p className="text-xs text-white leading-relaxed font-medium mt-1 font-mono italic">
                       {playbackTime < 30 ? `"...so when I joined ShiftUP, we jumped directly into microservices with Docker. It was intimidating but the mentor support was phenomenal..."` :
@@ -293,9 +293,9 @@ export default function StudentReviews() {
                   </div>
 
                   {/* Fake Seekbar */}
-                  <div className="flex-1 mx-6 h-1 bg-neutral-850 rounded-full overflow-hidden">
+                  <div className="flex-1 mx-6 h-1 bg-neutral-850 rounded-none overflow-hidden">
                     <div 
-                      className="bg-white h-full rounded-full transition-all duration-1000" 
+                      className="bg-white h-full rounded-none transition-all duration-1000" 
                       style={{ width: `${playbackTime}%` }}
                     />
                   </div>

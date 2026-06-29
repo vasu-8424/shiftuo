@@ -31,7 +31,7 @@ const coursesData: Course[] = [
       'API Security: JWT Auth, OAuth, CORS, secure headers',
       'Cloud Deployment: AWS EC2, S3 bucket storage, Dockerized setup'
     ],
-    gradient: 'from-blue-600 to-indigo-600'
+    gradient: ' '
   },
   {
     id: 'java-fs',
@@ -52,7 +52,7 @@ const coursesData: Course[] = [
       'Frontend integration using React.js or Angular',
       'CI/CD Pipelines, GitHub Actions, Jenkins builds'
     ],
-    gradient: 'from-sky-600 to-blue-700'
+    gradient: ' '
   },
   {
     id: 'python-fs',
@@ -73,7 +73,7 @@ const coursesData: Course[] = [
       'Frontend integration with modern React components',
       'Production deployment on Heroku, AWS, or DigitalOcean'
     ],
-    gradient: 'from-indigo-600 to-violet-700'
+    gradient: ' '
   },
   {
     id: 'ai-ml',
@@ -94,7 +94,7 @@ const coursesData: Course[] = [
       'Data Visualization: Tableau & Microsoft Power BI reporting',
       'Production AI deployments & cloud predictions'
     ],
-    gradient: 'from-purple-600 to-pink-600'
+    gradient: ' '
   },
   {
     id: 'cloud-devops',
@@ -115,7 +115,7 @@ const coursesData: Course[] = [
       'Infrastructure as Code (IaC) using Terraform configuration',
       'CI/CD Pipelines: Jenkins, GitHub Actions implementation'
     ],
-    gradient: 'from-emerald-600 to-teal-600'
+    gradient: ' '
   },
   {
     id: 'uiux-design',
@@ -136,7 +136,7 @@ const coursesData: Course[] = [
       'Creating scalable corporate Design Systems and UI components',
       'Portfolio building and developer handoff guidelines'
     ],
-    gradient: 'from-amber-600 to-orange-600'
+    gradient: ' '
   }
 ];
 
@@ -176,8 +176,8 @@ export default function PremiumCourses({ onEnrollClick }: PremiumCoursesProps) {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-[11px] font-extrabold uppercase tracking-widest text-white bg-white/10 border border-white/10 px-3 py-1.5 rounded-full inline-flex items-center gap-1.5">
-            <Sparkles className="h-3 w-3 text-emerald-400" />
+          <span className="text-[11px] font-extrabold uppercase tracking-widest text-white bg-white/10 border border-white/10 px-3 py-1.5 rounded-none inline-flex items-center gap-1.5">
+            <Sparkles className="h-3 w-3 text-black" />
             WORLD CLASS PROGRAMS
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-white mt-4 tracking-tight leading-tight">
@@ -189,12 +189,12 @@ export default function PremiumCourses({ onEnrollClick }: PremiumCoursesProps) {
         </div>
 
         {/* Filter Navigation */}
-        <div className="flex flex-wrap justify-center gap-2.5 mb-12 bg-neutral-950 border border-neutral-850 p-2 rounded-2xl w-fit mx-auto">
+        <div className="flex flex-wrap justify-center gap-2.5 mb-12 bg-neutral-950 border border-neutral-850 p-2 rounded-none w-fit mx-auto">
           {categories.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setSelectedCategory(cat.id as any)}
-              className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold tracking-wide transition-all cursor-pointer ${
+              className={`px-5 py-2.5 rounded-none text-xs sm:text-sm font-bold tracking-wide transition-all cursor-pointer ${
                 selectedCategory === cat.id 
                   ? 'bg-white text-black shadow-md' 
                   : 'text-neutral-400 hover:text-white hover:bg-neutral-900'
@@ -217,17 +217,17 @@ export default function PremiumCourses({ onEnrollClick }: PremiumCoursesProps) {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.4 }}
-                className="bg-[#0a0a0a]/80 rounded-3xl shadow-md border border-neutral-800 overflow-hidden flex flex-col justify-between group hover:border-neutral-700 transition-all duration-300"
+                className="bg-[#0a0a0a]/80 rounded-none shadow-md border border-neutral-800 overflow-hidden flex flex-col justify-between group hover:border-neutral-700 transition-all duration-300"
               >
                 {/* Visual Top Bar */}
                 <div className={`h-2.5 bg-neutral-800`} />
 
                 <div className="p-6 sm:p-7 flex-1">
                   <div className="flex justify-between items-start gap-2 mb-4">
-                    <span className="text-[10px] font-extrabold tracking-widest text-neutral-400 uppercase bg-neutral-900 border border-neutral-800 px-2.5 py-1 rounded-md">
+                    <span className="text-[10px] font-extrabold tracking-widest text-neutral-400 uppercase bg-neutral-900 border border-neutral-800 px-2.5 py-1 rounded-none">
                       {course.category === 'web-dev' ? 'Development' : course.category === 'data-ai' ? 'AI & Data' : 'Cloud / Operations'}
                     </span>
-                    <span className="flex items-center gap-1 text-xs font-bold text-neutral-200 bg-neutral-900 border border-neutral-800 px-2 py-0.5 rounded-md">
+                    <span className="flex items-center gap-1 text-xs font-bold text-neutral-200 bg-neutral-900 border border-neutral-800 px-2 py-0.5 rounded-none">
                       ★ {course.rating}
                     </span>
                   </div>
@@ -261,7 +261,7 @@ export default function PremiumCourses({ onEnrollClick }: PremiumCoursesProps) {
                       {course.skills.map((skill) => (
                         <span 
                           key={skill}
-                          className="text-[10px] font-bold text-neutral-300 bg-neutral-950 border border-neutral-850 px-2 py-1 rounded-lg"
+                          className="text-[10px] font-bold text-neutral-300 bg-neutral-950 border border-neutral-850 px-2 py-1 rounded-none"
                         >
                           {skill}
                         </span>
@@ -298,13 +298,13 @@ export default function PremiumCourses({ onEnrollClick }: PremiumCoursesProps) {
                           transition={{ duration: 0.3 }}
                           className="overflow-hidden mt-3"
                         >
-                          <div className="bg-neutral-950 rounded-2xl p-4 border border-neutral-900 space-y-2">
+                          <div className="bg-neutral-950 rounded-none p-4 border border-neutral-900 space-y-2">
                             <h6 className="text-[10px] font-black text-neutral-500 uppercase tracking-widest mb-1.5">
                               MODULE SYLLABUS PIPELINE
                             </h6>
                             {course.curriculum.map((module, mIdx) => (
                               <div key={mIdx} className="flex items-start gap-2 text-xs text-neutral-300 font-medium">
-                                <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
+                                <CheckCircle2 className="h-4 w-4 text-black shrink-0 mt-0.5" />
                                 <span>{module}</span>
                               </div>
                             ))}
@@ -318,7 +318,7 @@ export default function PremiumCourses({ onEnrollClick }: PremiumCoursesProps) {
                 {/* Card Footer (NO prices, pure black theme with "Apply Now" CTA button) */}
                 <div className="p-6 bg-neutral-950 border-t border-neutral-900 flex items-center justify-between">
                   <div className="leading-tight">
-                    <span className="text-emerald-400 text-[10px] font-bold tracking-widest uppercase">
+                    <span className="text-black text-[10px] font-bold tracking-widest uppercase">
                       Curriculum Access Approved
                     </span>
                     <p className="text-xs text-neutral-400 font-medium">
@@ -328,7 +328,7 @@ export default function PremiumCourses({ onEnrollClick }: PremiumCoursesProps) {
 
                   <button
                     onClick={() => onEnrollClick(course.title)}
-                    className="px-5 py-2.5 bg-white text-black hover:bg-neutral-200 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-md"
+                    className="px-5 py-2.5 bg-white text-black hover:bg-neutral-200 rounded-none text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-md"
                     id={`enroll-btn-${course.id}`}
                   >
                     Apply Now

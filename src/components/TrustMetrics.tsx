@@ -65,8 +65,8 @@ export default function TrustMetrics() {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-xl mx-auto mb-12">
-          <span className="text-[11px] font-extrabold uppercase tracking-widest text-white bg-white/10 border border-white/10 px-3 py-1 rounded-full flex items-center gap-1.5 w-fit mx-auto">
-            <Sparkles className="h-3 w-3 text-emerald-400" />
+          <span className="text-[11px] font-extrabold uppercase tracking-widest text-white bg-white/10 border border-white/10 px-3 py-1 rounded-none flex items-center gap-1.5 w-fit mx-auto">
+            <Sparkles className="h-3 w-3 text-black" />
             VALIDATED TRACK RECORD
           </span>
           <h2 className="text-2xl sm:text-3xl font-display font-extrabold text-white mt-3.5">
@@ -83,9 +83,9 @@ export default function TrustMetrics() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.08 }}
               whileHover={{ y: -5 }}
-              className="bg-[#0a0a0a]/80 border border-neutral-800 p-5 rounded-2xl shadow-sm hover:border-neutral-700 transition-all duration-300 relative group"
+              className="bg-[#0a0a0a]/80 border border-neutral-800 p-5 rounded-none shadow-sm hover:border-neutral-700 transition-all duration-300 relative group"
             >
-              <div className={`w-12 h-12 rounded-xl bg-neutral-900 border border-neutral-800 flex items-center justify-center mb-4 transition-transform group-hover:scale-105 duration-300`}>
+              <div className={`w-12 h-12 rounded-none bg-neutral-900 border border-neutral-800 flex items-center justify-center mb-4 transition-transform group-hover:scale-105 duration-300`}>
                 {metric.icon}
               </div>
               

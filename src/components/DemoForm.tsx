@@ -90,7 +90,7 @@ export default function DemoForm({ onLeadSubmit, selectedCourseFromProps }: Demo
           
           {/* Form Left Content */}
           <div className="lg:col-span-5 space-y-6 text-left">
-            <span className="text-[11px] font-extrabold uppercase tracking-widest text-white bg-white/10 px-3.5 py-1.5 rounded-full inline-flex items-center gap-1.5 border border-white/10">
+            <span className="text-[11px] font-extrabold uppercase tracking-widest text-white bg-white/10 px-3.5 py-1.5 rounded-none inline-flex items-center gap-1.5 border border-white/10">
               <Sparkles className="h-4 w-4 animate-spin text-white" />
               SECURE SEAT BOOKING
             </span>
@@ -106,7 +106,7 @@ export default function DemoForm({ onLeadSubmit, selectedCourseFromProps }: Demo
 
             <div className="space-y-4 pt-6 border-t border-neutral-900">
               <div className="flex items-start gap-3">
-                <div className="p-2 bg-neutral-900 text-white rounded-xl border border-neutral-800">
+                <div className="p-2 bg-neutral-900 text-white rounded-none border border-neutral-800">
                   <Calendar className="h-5 w-5" />
                 </div>
                 <div>
@@ -116,7 +116,7 @@ export default function DemoForm({ onLeadSubmit, selectedCourseFromProps }: Demo
               </div>
 
               <div className="flex items-start gap-3">
-                <div className="p-2 bg-neutral-900 text-white rounded-xl border border-neutral-800">
+                <div className="p-2 bg-neutral-900 text-white rounded-none border border-neutral-800">
                   <MapPin className="h-5 w-5" />
                 </div>
                 <div>
@@ -129,17 +129,17 @@ export default function DemoForm({ onLeadSubmit, selectedCourseFromProps }: Demo
 
           {/* Form Card Grid Column */}
           <div className="lg:col-span-7 flex justify-center">
-            <div className="w-full max-w-[540px] bg-[#050505]/95 border border-neutral-800 rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+            <div className="w-full max-w-[540px] bg-[#050505]/95 border border-neutral-800 rounded-none p-6 sm:p-8 shadow-2xl relative overflow-hidden">
               
               {!isSuccess ? (
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="flex items-center justify-between pb-3.5 border-b border-neutral-900 mb-2">
                     <span className="text-xs font-mono font-bold text-neutral-500">counseling_inquiry_ledger</span>
-                    <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+                    <span className="h-2 w-2 rounded-none bg-black animate-pulse" />
                   </div>
 
                   {errorMessage && (
-                    <div className="p-3 bg-red-950/40 border border-red-900 rounded-xl text-xs text-red-400 font-medium">
+                    <div className="p-3 bg-black/40 border border-black rounded-none text-xs text-black font-medium">
                       {errorMessage}
                     </div>
                   )}
@@ -157,7 +157,7 @@ export default function DemoForm({ onLeadSubmit, selectedCourseFromProps }: Demo
                         value={formName}
                         onChange={(e) => setFormName(e.target.value)}
                         placeholder="e.g. Challa Rama Rao"
-                        className="w-full pl-10 pr-4 py-3 bg-black border border-neutral-805 rounded-xl text-sm font-semibold focus:outline-none focus:border-white transition-colors placeholder:text-neutral-700 text-slate-200"
+                        className="w-full pl-10 pr-4 py-3 bg-black border border-neutral-805 rounded-none text-sm font-semibold focus:outline-none focus:border-white transition-colors placeholder:text-neutral-700 text-slate-200"
                         id="form-input-name"
                       />
                     </div>
@@ -177,7 +177,7 @@ export default function DemoForm({ onLeadSubmit, selectedCourseFromProps }: Demo
                           value={formPhone}
                           onChange={(e) => setFormPhone(e.target.value)}
                           placeholder="e.g. 6303612645"
-                          className="w-full pl-10 pr-4 py-3 bg-black border border-neutral-805 rounded-xl text-sm font-semibold focus:outline-none focus:border-white transition-colors placeholder:text-neutral-700 text-slate-200"
+                          className="w-full pl-10 pr-4 py-3 bg-black border border-neutral-805 rounded-none text-sm font-semibold focus:outline-none focus:border-white transition-colors placeholder:text-neutral-700 text-slate-200"
                           id="form-input-phone"
                         />
                       </div>
@@ -195,7 +195,7 @@ export default function DemoForm({ onLeadSubmit, selectedCourseFromProps }: Demo
                           value={formEmail}
                           onChange={(e) => setFormEmail(e.target.value)}
                           placeholder="e.g. ramarao@gmail.com"
-                          className="w-full pl-10 pr-4 py-3 bg-black border border-neutral-805 rounded-xl text-sm font-semibold focus:outline-none focus:border-white transition-colors placeholder:text-neutral-700 text-slate-200"
+                          className="w-full pl-10 pr-4 py-3 bg-black border border-neutral-805 rounded-none text-sm font-semibold focus:outline-none focus:border-white transition-colors placeholder:text-neutral-700 text-slate-200"
                           id="form-input-email"
                         />
                       </div>
@@ -211,7 +211,7 @@ export default function DemoForm({ onLeadSubmit, selectedCourseFromProps }: Demo
                       <select
                         value={formCourse}
                         onChange={(e) => setFormCourse(e.target.value)}
-                        className="w-full px-3.5 py-3 bg-black border border-neutral-805 rounded-xl text-sm font-semibold focus:outline-none focus:border-white transition-colors text-slate-300 cursor-pointer"
+                        className="w-full px-3.5 py-3 bg-black border border-neutral-805 rounded-none text-sm font-semibold focus:outline-none focus:border-white transition-colors text-slate-300 cursor-pointer"
                         id="form-select-course"
                       >
                         <option value="MERN Stack Developer">MERN Stack Developer</option>
@@ -230,7 +230,7 @@ export default function DemoForm({ onLeadSubmit, selectedCourseFromProps }: Demo
                       <select
                         value={formExperience}
                         onChange={(e) => setFormExperience(e.target.value as any)}
-                        className="w-full px-3.5 py-3 bg-black border border-neutral-805 rounded-xl text-sm font-semibold focus:outline-none focus:border-white transition-colors text-slate-300 cursor-pointer"
+                        className="w-full px-3.5 py-3 bg-black border border-neutral-805 rounded-none text-sm font-semibold focus:outline-none focus:border-white transition-colors text-slate-300 cursor-pointer"
                         id="form-select-experience"
                       >
                         <option value="Student">College Student</option>
@@ -250,7 +250,7 @@ export default function DemoForm({ onLeadSubmit, selectedCourseFromProps }: Demo
                       <button
                         type="button"
                         onClick={() => setFormMode('Offline Vijayawada')}
-                        className={`py-3 px-4 rounded-xl border text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer ${
+                        className={`py-3 px-4 rounded-none border text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer ${
                           formMode === 'Offline Vijayawada' 
                             ? 'bg-white text-black border-white shadow-md' 
                             : 'bg-black border-neutral-800 text-neutral-400 hover:text-white'
@@ -264,7 +264,7 @@ export default function DemoForm({ onLeadSubmit, selectedCourseFromProps }: Demo
                       <button
                         type="button"
                         onClick={() => setFormMode('Online Live')}
-                        className={`py-3 px-4 rounded-xl border text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer ${
+                        className={`py-3 px-4 rounded-none border text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer ${
                           formMode === 'Online Live' 
                             ? 'bg-white text-black border-white shadow-md' 
                             : 'bg-black border-neutral-800 text-neutral-400 hover:text-white'
@@ -281,7 +281,7 @@ export default function DemoForm({ onLeadSubmit, selectedCourseFromProps }: Demo
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-4 bg-white hover:bg-neutral-200 text-black font-extrabold uppercase tracking-widest text-xs rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer"
+                    className="w-full py-4 bg-white hover:bg-neutral-200 text-black font-extrabold uppercase tracking-widest text-xs rounded-none shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer"
                     id="form-btn-submit"
                   >
                     <Send className="h-4 w-4" />
@@ -291,7 +291,7 @@ export default function DemoForm({ onLeadSubmit, selectedCourseFromProps }: Demo
               ) : (
                 /* Success Advisor Assignment Mode */
                 <div className="text-center space-y-6 py-6 animate-fadeIn">
-                  <div className="w-16 h-16 rounded-full bg-white/10 border-2 border-white flex items-center justify-center mx-auto text-white">
+                  <div className="w-16 h-16 rounded-none bg-white/10 border-2 border-white flex items-center justify-center mx-auto text-white">
                     <CheckCircle2 className="h-10 w-10 animate-bounce" />
                   </div>
 
@@ -310,11 +310,11 @@ export default function DemoForm({ onLeadSubmit, selectedCourseFromProps }: Demo
 
                   {/* Assigned Counselor Widget */}
                   {assignedAdvisor && (
-                    <div className="bg-black border border-neutral-800 rounded-2xl p-4 max-w-sm mx-auto flex items-center gap-3.5 text-left">
+                    <div className="bg-black border border-neutral-800 rounded-none p-4 max-w-sm mx-auto flex items-center gap-3.5 text-left">
                       <img 
                         src={assignedAdvisor.avatar} 
                         alt={assignedAdvisor.name}
-                        className="w-12 h-12 rounded-full border border-neutral-800 object-cover"
+                        className="w-12 h-12 rounded-none border border-neutral-800 object-cover"
                         referrerPolicy="no-referrer"
                       />
                       <div>
@@ -332,7 +332,7 @@ export default function DemoForm({ onLeadSubmit, selectedCourseFromProps }: Demo
                       href={`https://wa.me/91${formPhone}?text=Hi+ShiftUP+Academy,+I+just+registered+for+the+free+demo`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full py-3.5 bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-2 shadow-md border border-neutral-800"
+                      className="w-full py-3.5 bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-bold uppercase tracking-wider rounded-none transition-all flex items-center justify-center gap-2 shadow-md border border-neutral-800"
                       id="btn-whatsapp-counselor"
                     >
                       <MessageSquare className="h-4.5 w-4.5" />

@@ -71,8 +71,8 @@ export default function WhyShiftUp() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-[11px] font-extrabold uppercase tracking-widest text-white bg-white/10 border border-white/10 px-3 py-1.5 rounded-full inline-flex items-center gap-1.5">
-            <Sparkles className="h-3 w-3 text-emerald-400 animate-pulse" />
+          <span className="text-[11px] font-extrabold uppercase tracking-widest text-white bg-white/10 border border-white/10 px-3 py-1.5 rounded-none inline-flex items-center gap-1.5">
+            <Sparkles className="h-3 w-3 text-black animate-pulse" />
             THE SHIFTUP ADVANTAGE
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-white mt-4 tracking-tight leading-tight">
@@ -94,14 +94,14 @@ export default function WhyShiftUp() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.05 }}
               whileHover={{ y: -6 }}
-              className={`bg-[#0a0a0a]/80 border border-neutral-800 p-6 sm:p-8 rounded-3xl shadow-sm hover:border-neutral-700 transition-all duration-300 flex flex-col justify-between group ${point.size}`}
+              className={`bg-[#0a0a0a]/80 border border-neutral-800 p-6 sm:p-8 rounded-none shadow-sm hover:border-neutral-700 transition-all duration-300 flex flex-col justify-between group ${point.size}`}
             >
               <div>
                 <div className="flex items-center justify-between mb-6">
-                  <div className="w-12 h-12 rounded-2xl bg-neutral-900 border border-neutral-800 flex items-center justify-center transition-transform group-hover:scale-105 duration-300">
+                  <div className="w-12 h-12 rounded-none bg-neutral-900 border border-neutral-800 flex items-center justify-center transition-transform group-hover:scale-105 duration-300">
                     {point.icon}
                   </div>
-                  <span className="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400 bg-neutral-900 border border-neutral-800 px-2.5 py-1 rounded-md">
+                  <span className="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400 bg-neutral-900 border border-neutral-800 px-2.5 py-1 rounded-none">
                     {point.tag}
                   </span>
                 </div>
