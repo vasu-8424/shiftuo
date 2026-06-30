@@ -10,6 +10,7 @@ import StudentReviews from './components/StudentReviews';
 import DemoForm from './components/DemoForm';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
+
 import { Lead } from './types';
 import { MessageSquare, PhoneCall, ArrowUpRight, GraduationCap } from 'lucide-react';
 
@@ -44,7 +45,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 relative selection:bg-black selection:text-white overflow-x-hidden">
+    <div className="min-h-screen bg-slate-50 relative selection:bg-[#FDFBF7] selection:text-[#2C241B] overflow-x-hidden">
       
       {/* Premium background noise texture overlay for organic feeling */}
       <div className="fixed inset-0 pointer-events-none opacity-[0.015] bg-repeat dot-grid z-50" />
@@ -72,6 +73,8 @@ export default function App() {
 
             {/* Infinite Log Marquee */}
             <HiringPartners />
+
+
 
             {/* Bento features grid */}
             <WhyShiftUp />

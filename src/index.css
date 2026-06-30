@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
-  --font-display: "Dancing Script", cursive, sans-serif;
+  --font-display: "Inter", system-ui, -apple-system, sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 
-  --color-brand-primary: #000000;
-  --color-brand-secondary: #333333;
-  --color-brand-accent: #666666;
-  --color-brand-dark: #000000;
-  --color-brand-bg: #FFFFFF;
+  --color-brand-primary: #FDFBF7;
+  --color-brand-secondary: #F5F2EB;
+  --color-brand-accent: #D2C4B1;
+  --color-brand-dark: #2C241B;
+  --color-brand-bg: #FDFBF7;
   
   --animate-marquee: marquee 30s linear infinite;
   --animate-marquee-reverse: marquee-reverse 30s linear infinite;
@@ -40,7 +40,7 @@
 html {
   scroll-behavior: smooth;
   background-color: var(--color-brand-bg);
-  color: #000000;
+  color: var(--color-brand-dark);
   font-family: var(--font-sans);
 }
 
@@ -57,10 +57,10 @@ h1, h2, h3, h4, h5, h6 {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #FFFFFF;
+  background: var(--color-brand-bg);
 }
 ::-webkit-scrollbar-thumb {
-  background: #CCCCCC;
+  background: var(--color-brand-accent);
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -76,10 +76,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .glass-panel-dark {
-  background: rgba(15, 23, 42, 0.85);
+  background: rgba(253, 251, 247, 0.85);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(44, 36, 27, 0.08);
 }
 
 .text-glow {

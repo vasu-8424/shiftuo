@@ -4,7 +4,48 @@ import {
   Code2, Calendar, Layout, Award, CheckCircle2, ChevronDown, ChevronUp, 
   HelpCircle, Sparkles, Server, Cpu, Database, Cloud, Tablet, Bookmark, Eye 
 } from 'lucide-react';
+import { 
+  FaReact, FaNodeJs, FaDocker, FaAws, FaJava, FaPython, FaFigma, FaLinux, FaGitlab, FaJenkins
+} from 'react-icons/fa';
+import { 
+  SiExpress, SiMongodb, SiRedux, SiSpringboot, SiPostgresql, SiDjango, SiFastapi, 
+  SiTensorflow, SiPandas, SiNumpy, SiScikitlearn, SiKubernetes, SiTerraform, SiAnsible 
+} from 'react-icons/si';
 import { Course } from '../types';
+
+const getTechIcon = (skill: string) => {
+  const iconProps = { className: "w-3 h-3" };
+  switch (skill.toLowerCase()) {
+    case 'react.js': return <FaReact {...iconProps} />;
+    case 'node.js': return <FaNodeJs {...iconProps} />;
+    case 'express': return <SiExpress {...iconProps} />;
+    case 'mongodb': return <SiMongodb {...iconProps} />;
+    case 'redux': return <SiRedux {...iconProps} />;
+    case 'docker': return <FaDocker {...iconProps} />;
+    case 'aws':
+    case 'aws cloud': return <FaAws {...iconProps} />;
+    case 'java 21': return <FaJava {...iconProps} />;
+    case 'spring boot': return <SiSpringboot {...iconProps} />;
+    case 'postgresql': return <SiPostgresql {...iconProps} />;
+    case 'python':
+    case 'python 3': return <FaPython {...iconProps} />;
+    case 'django': return <SiDjango {...iconProps} />;
+    case 'fastapi': return <SiFastapi {...iconProps} />;
+    case 'tensorflow': return <SiTensorflow {...iconProps} />;
+    case 'pandas': return <SiPandas {...iconProps} />;
+    case 'numpy': return <SiNumpy {...iconProps} />;
+    case 'scikit-learn': return <SiScikitlearn {...iconProps} />;
+    case 'power bi': return <Database {...iconProps} />;
+    case 'kubernetes': return <SiKubernetes {...iconProps} />;
+    case 'terraform': return <SiTerraform {...iconProps} />;
+    case 'ansible': return <SiAnsible {...iconProps} />;
+    case 'linux cli': return <FaLinux {...iconProps} />;
+    case 'jenkins': return <FaJenkins {...iconProps} />;
+    case 'gitlab': return <FaGitlab {...iconProps} />;
+    case 'figma': return <FaFigma {...iconProps} />;
+    default: return <Code2 {...iconProps} />;
+  }
+};
 import AnimatedGridBackground from './AnimatedGridBackground';
 
 interface PremiumCoursesProps {
@@ -165,39 +206,39 @@ export default function PremiumCourses({ onEnrollClick }: PremiumCoursesProps) {
   };
 
   return (
-    <section id="courses" className="py-24 bg-black relative scroll-mt-10 text-white border-b border-neutral-900">
+    <section id="courses" className="py-24 bg-[#FDFBF7] relative scroll-mt-10 text-[#2C241B] border-b border-neutral-900">
       {/* 4K Background Image and Animated Grid */}
       <AnimatedGridBackground 
         imageUrl="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=3840" 
-        overlayClassName="bg-black/92"
+        overlayClassName="bg-[#FDFBF7]/92"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-[11px] font-extrabold uppercase tracking-widest text-white bg-white/10 border border-white/10 px-3 py-1.5 rounded-none inline-flex items-center gap-1.5">
-            <Sparkles className="h-3 w-3 text-black" />
+          <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#2C241B] bg-[#2C241B]/10 border border-[#2C241B]/10 px-3 py-1.5 rounded-none inline-flex items-center gap-1.5">
+            <Sparkles className="h-3 w-3 text-[#FDFBF7]" />
             WORLD CLASS PROGRAMS
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-white mt-4 tracking-tight leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-[#2C241B] mt-4 tracking-tight leading-tight">
             Curated Premium Courses
           </h2>
-          <p className="text-neutral-400 mt-3 text-base sm:text-lg font-light">
+          <p className="text-[#7A6C5D] mt-3 text-base sm:text-lg font-light">
             Acquire production-level training engineered by corporate professionals. Scroll to expand curriculum syllabi.
           </p>
         </div>
 
         {/* Filter Navigation */}
-        <div className="flex flex-wrap justify-center gap-2.5 mb-12 bg-neutral-950 border border-neutral-850 p-2 rounded-none w-fit mx-auto">
+        <div className="flex flex-wrap justify-center gap-2.5 mb-12 bg-[#F5F2EB] border border-neutral-850 p-2 rounded-none w-fit mx-auto">
           {categories.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setSelectedCategory(cat.id as any)}
               className={`px-5 py-2.5 rounded-none text-xs sm:text-sm font-bold tracking-wide transition-all cursor-pointer ${
                 selectedCategory === cat.id 
-                  ? 'bg-white text-black shadow-md' 
-                  : 'text-neutral-400 hover:text-white hover:bg-neutral-900'
+                  ? 'bg-[#2C241B] text-[#FDFBF7] shadow-md' 
+                  : 'text-[#7A6C5D] hover:text-[#2C241B] hover:bg-[#EAE4D9]'
               }`}
               id={`cat-btn-${cat.id}`}
             >
@@ -217,52 +258,53 @@ export default function PremiumCourses({ onEnrollClick }: PremiumCoursesProps) {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.4 }}
-                className="bg-[#0a0a0a]/80 rounded-none shadow-md border border-neutral-800 overflow-hidden flex flex-col justify-between group hover:border-neutral-700 transition-all duration-300"
+                className="bg-[#F5F2EB]/80 rounded-none shadow-md border border-[#E8E0D5] overflow-hidden flex flex-col justify-between group hover:border-neutral-700 transition-all duration-300"
               >
                 {/* Visual Top Bar */}
-                <div className={`h-2.5 bg-neutral-800`} />
+                <div className={`h-2.5 bg-[#D2C4B1]`} />
 
                 <div className="p-6 sm:p-7 flex-1">
                   <div className="flex justify-between items-start gap-2 mb-4">
-                    <span className="text-[10px] font-extrabold tracking-widest text-neutral-400 uppercase bg-neutral-900 border border-neutral-800 px-2.5 py-1 rounded-none">
+                    <span className="text-[10px] font-extrabold tracking-widest text-[#7A6C5D] uppercase bg-[#EAE4D9] border border-[#E8E0D5] px-2.5 py-1 rounded-none">
                       {course.category === 'web-dev' ? 'Development' : course.category === 'data-ai' ? 'AI & Data' : 'Cloud / Operations'}
                     </span>
-                    <span className="flex items-center gap-1 text-xs font-bold text-neutral-200 bg-neutral-900 border border-neutral-800 px-2 py-0.5 rounded-none">
+                    <span className="flex items-center gap-1 text-xs font-bold text-[#4A3F35] bg-[#EAE4D9] border border-[#E8E0D5] px-2 py-0.5 rounded-none">
                       ★ {course.rating}
                     </span>
                   </div>
 
-                  <h3 className="text-xl sm:text-2xl font-display font-extrabold text-white tracking-tight transition-colors">
+                  <h3 className="text-xl sm:text-2xl font-display font-extrabold text-[#2C241B] tracking-tight transition-colors">
                     {course.title}
                   </h3>
 
-                  <p className="text-neutral-400 text-xs sm:text-sm mt-2.5 leading-relaxed font-light">
+                  <p className="text-[#7A6C5D] text-xs sm:text-sm mt-2.5 leading-relaxed font-light">
                     {course.description}
                   </p>
 
                   {/* Course Details row */}
-                  <div className="grid grid-cols-2 gap-4 my-5 py-3.5 border-y border-neutral-900 text-xs text-neutral-300 font-bold">
+                  <div className="grid grid-cols-2 gap-4 my-5 py-3.5 border-y border-neutral-900 text-xs text-[#635547] font-bold">
                     <div className="flex items-center gap-2">
-                      <Calendar className="h-4.5 w-4.5 text-white shrink-0" />
+                      <Calendar className="h-4.5 w-4.5 text-[#2C241B] shrink-0" />
                       <span>{course.duration}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Code2 className="h-4.5 w-4.5 text-white shrink-0" />
+                      <Code2 className="h-4.5 w-4.5 text-[#2C241B] shrink-0" />
                       <span>{course.projectsCount}+ Prod Projects</span>
                     </div>
                   </div>
 
                   {/* Skills Grid */}
                   <div>
-                    <h5 className="text-[10px] font-extrabold text-neutral-400 uppercase tracking-widest mb-2.5">
+                    <h5 className="text-[10px] font-extrabold text-[#7A6C5D] uppercase tracking-widest mb-2.5">
                       KEY PRODUCTION SKILLS COVERED
                     </h5>
                     <div className="flex flex-wrap gap-1.5">
                       {course.skills.map((skill) => (
                         <span 
                           key={skill}
-                          className="text-[10px] font-bold text-neutral-300 bg-neutral-950 border border-neutral-850 px-2 py-1 rounded-none"
+                          className="text-[10px] font-bold text-[#635547] bg-[#F5F2EB] border border-neutral-850 px-2 py-1 rounded-none flex items-center gap-1.5"
                         >
+                          {getTechIcon(skill)}
                           {skill}
                         </span>
                       ))}
@@ -273,17 +315,17 @@ export default function PremiumCourses({ onEnrollClick }: PremiumCoursesProps) {
                   <div className="mt-5">
                     <button
                       onClick={() => toggleCurriculum(course.id)}
-                      className="flex items-center gap-1.5 text-xs font-bold text-neutral-400 hover:text-white transition-colors cursor-pointer"
+                      className="flex items-center gap-1.5 text-xs font-bold text-[#7A6C5D] hover:text-[#2C241B] transition-colors cursor-pointer"
                       id={`btn-syllabus-${course.id}`}
                     >
                       {expandedCourseId === course.id ? (
                         <>
-                          <ChevronUp className="h-4 w-4 text-white" />
+                          <ChevronUp className="h-4 w-4 text-[#2C241B]" />
                           Hide Detailed Syllabus
                         </>
                       ) : (
                         <>
-                          <ChevronDown className="h-4 w-4 text-neutral-500" />
+                          <ChevronDown className="h-4 w-4 text-[#8C7A6B]" />
                           View Detailed Syllabus
                         </>
                       )}
@@ -298,13 +340,13 @@ export default function PremiumCourses({ onEnrollClick }: PremiumCoursesProps) {
                           transition={{ duration: 0.3 }}
                           className="overflow-hidden mt-3"
                         >
-                          <div className="bg-neutral-950 rounded-none p-4 border border-neutral-900 space-y-2">
-                            <h6 className="text-[10px] font-black text-neutral-500 uppercase tracking-widest mb-1.5">
+                          <div className="bg-[#F5F2EB] rounded-none p-4 border border-neutral-900 space-y-2">
+                            <h6 className="text-[10px] font-black text-[#8C7A6B] uppercase tracking-widest mb-1.5">
                               MODULE SYLLABUS PIPELINE
                             </h6>
                             {course.curriculum.map((module, mIdx) => (
-                              <div key={mIdx} className="flex items-start gap-2 text-xs text-neutral-300 font-medium">
-                                <CheckCircle2 className="h-4 w-4 text-black shrink-0 mt-0.5" />
+                              <div key={mIdx} className="flex items-start gap-2 text-xs text-[#635547] font-medium">
+                                <CheckCircle2 className="h-4 w-4 text-[#FDFBF7] shrink-0 mt-0.5" />
                                 <span>{module}</span>
                               </div>
                             ))}
@@ -316,19 +358,19 @@ export default function PremiumCourses({ onEnrollClick }: PremiumCoursesProps) {
                 </div>
 
                 {/* Card Footer (NO prices, pure black theme with "Apply Now" CTA button) */}
-                <div className="p-6 bg-neutral-950 border-t border-neutral-900 flex items-center justify-between">
+                <div className="p-6 bg-[#F5F2EB] border-t border-neutral-900 flex items-center justify-between">
                   <div className="leading-tight">
-                    <span className="text-black text-[10px] font-bold tracking-widest uppercase">
+                    <span className="text-[#FDFBF7] text-[10px] font-bold tracking-widest uppercase">
                       Curriculum Access Approved
                     </span>
-                    <p className="text-xs text-neutral-400 font-medium">
+                    <p className="text-xs text-[#7A6C5D] font-medium">
                       Premium Training Program
                     </p>
                   </div>
 
                   <button
                     onClick={() => onEnrollClick(course.title)}
-                    className="px-5 py-2.5 bg-white text-black hover:bg-neutral-200 rounded-none text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-md"
+                    className="px-5 py-2.5 bg-[#2C241B] text-[#FDFBF7] hover:bg-[#4A3F35] rounded-none text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-md"
                     id={`enroll-btn-${course.id}`}
                   >
                     Apply Now

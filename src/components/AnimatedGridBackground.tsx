@@ -8,7 +8,7 @@ interface AnimatedGridBackgroundProps {
 
 export default function AnimatedGridBackground({ 
   imageUrl, 
-  overlayClassName = 'bg-black/85' 
+  overlayClassName = 'bg-[#FDFBF7]/85' 
 }: AnimatedGridBackgroundProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -51,7 +51,7 @@ export default function AnimatedGridBackground({
       )}
 
       {/* Dark premium contrast mask */}
-      <div className={`absolute inset-0 mix-blend-multiply ${overlayClassName}`} />
+      <div className={`absolute inset-0 ${overlayClassName}`} />
 
       {/* Dynamic Animated Grid Pattern */}
       <div 
@@ -71,19 +71,19 @@ export default function AnimatedGridBackground({
           initial={{ x: '-100%' }}
           animate={{ x: '100%' }}
           transition={{ duration: 12, repeat: Infinity, ease: 'linear' }}
-          className="absolute top-1/4 left-0 right-0 h-[1px] bg-black  /20 "
+          className="absolute top-1/4 left-0 right-0 h-[1px] bg-[#FDFBF7]  /20 "
         />
         <motion.div 
           initial={{ y: '-100%' }}
           animate={{ y: '100%' }}
           transition={{ duration: 15, repeat: Infinity, ease: 'linear', delay: 3 }}
-          className="absolute top-0 bottom-0 left-1/3 w-[1px] bg-black  /15 "
+          className="absolute top-0 bottom-0 left-1/3 w-[1px] bg-[#FDFBF7]  /15 "
         />
         <motion.div 
           initial={{ x: '100%' }}
           animate={{ x: '-100%' }}
           transition={{ duration: 18, repeat: Infinity, ease: 'linear', delay: 5 }}
-          className="absolute bottom-1/3 left-0 right-0 h-[1px] bg-black  /10 "
+          className="absolute bottom-1/3 left-0 right-0 h-[1px] bg-[#FDFBF7]  /10 "
         />
       </div>
 
@@ -96,8 +96,8 @@ export default function AnimatedGridBackground({
       />
 
       {/* High-fidelity ambient organic shapes */}
-      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-white/[0.02] rounded-none blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-1/3 left-1/4 w-96 h-96 bg-white/[0.01] rounded-none blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-[#2C241B]/[0.02] rounded-none blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-1/3 left-1/4 w-96 h-96 bg-[#2C241B]/[0.01] rounded-none blur-[120px] pointer-events-none" />
     </div>
   );
 }
