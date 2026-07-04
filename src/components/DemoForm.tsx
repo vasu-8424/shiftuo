@@ -12,10 +12,6 @@ interface DemoFormProps {
   selectedCourseFromProps?: string;
 }
 
-const counselors = [
-  { name: 'Dr. Srinivasa Rao', role: 'Chief Technical Counselor', phone: '6303612645', email: 'srinivasa@shiftup.in', avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150' },
-  { name: 'Mrs. Srilatha Prasad', role: 'Senior Admissions Lead', phone: '6303612645', email: 'srilatha@shiftup.in', avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150' }
-];
 
 export default function DemoForm({ onLeadSubmit, selectedCourseFromProps }: DemoFormProps) {
   const [formName, setFormName] = useState('');
@@ -27,7 +23,6 @@ export default function DemoForm({ onLeadSubmit, selectedCourseFromProps }: Demo
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  const [assignedAdvisor, setAssignedAdvisor] = useState<typeof counselors[0] | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   // Sync state if selection from course list occurs
@@ -49,9 +44,6 @@ export default function DemoForm({ onLeadSubmit, selectedCourseFromProps }: Demo
     setIsSubmitting(true);
 
     setTimeout(() => {
-      // Choose advisor
-      const chosen = counselors[Math.floor(Math.random() * counselors.length)];
-      setAssignedAdvisor(chosen);
 
       // Submit up
       onLeadSubmit({
@@ -68,7 +60,7 @@ export default function DemoForm({ onLeadSubmit, selectedCourseFromProps }: Demo
 
       // Redirect to WhatsApp
       const message = `Hello ShiftUP! I would like to book a Free Demo.\n\n*Name:* ${formName}\n*Phone:* ${formPhone}\n*Email:* ${formEmail}\n*Course:* ${formCourse}\n*Experience:* ${formExperience}\n*Mode:* ${formMode}`;
-      window.location.href = `https://wa.me/916303612645?text=${encodeURIComponent(message)}`;
+      window.location.href = `https://wa.me/917989624119?text=${encodeURIComponent(message)}`;
     }, 1200);
   };
 
@@ -78,7 +70,6 @@ export default function DemoForm({ onLeadSubmit, selectedCourseFromProps }: Demo
     setFormEmail('');
     setErrorMessage(null);
     setIsSuccess(false);
-    setAssignedAdvisor(null);
   };
 
   return (
@@ -309,38 +300,20 @@ export default function DemoForm({ onLeadSubmit, selectedCourseFromProps }: Demo
                   </div>
 
                   <p className="text-[#635547] text-sm max-w-sm mx-auto leading-relaxed font-light">
-                    Hello <strong className="text-[#2C241B]">{formName}</strong>, your inquiry for the <strong className="text-[#2C241B]">{formCourse}</strong> program is securely registered. Let's see your assigned counselor.
+                    Hello <strong className="text-[#2C241B]">{formName}</strong>, your inquiry for the <strong className="text-[#2C241B]">{formCourse}</strong> program is securely registered. We will contact you shortly!
                   </p>
-
-                  {/* Assigned Counselor Widget */}
-                  {assignedAdvisor && (
-                    <div className="bg-[#FDFBF7] border border-[#E8E0D5] rounded-none p-4 max-w-sm mx-auto flex items-center gap-3.5 text-left">
-                      <img 
-                        src={assignedAdvisor.avatar} 
-                        alt={assignedAdvisor.name}
-                        className="w-12 h-12 rounded-none border border-[#E8E0D5] object-cover"
-                        referrerPolicy="no-referrer"
-                      />
-                      <div>
-                        <span className="text-[9px] font-black tracking-widest text-[#7A6C5D] uppercase">ASSIGNED CAREER ADVISOR</span>
-                        <h4 className="text-sm font-bold text-[#2C241B]">{assignedAdvisor.name}</h4>
-                        <p className="text-[11px] text-[#8C7A6B] font-medium">{assignedAdvisor.role}</p>
-                        <p className="text-[10px] text-[#7A6C5D] mt-0.5">{assignedAdvisor.email}</p>
-                      </div>
-                    </div>
-                  )}
 
                   {/* WhatsApp/Call triggers */}
                   <div className="flex flex-col gap-2 pt-2 max-w-sm mx-auto">
                     <a 
-                      href={`https://wa.me/91${formPhone}?text=Hi+ShiftUP+Academy,+I+just+registered+for+the+free+demo`}
+                      href={`https://wa.me/917989624119?text=Hi+ShiftUP+Academy,+I+just+registered+for+the+free+demo`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full py-3.5 bg-[#EAE4D9] hover:bg-[#D2C4B1] text-[#2C241B] text-xs font-bold uppercase tracking-wider rounded-none transition-all flex items-center justify-center gap-2 shadow-md border border-[#E8E0D5]"
                       id="btn-whatsapp-counselor"
                     >
                       <MessageSquare className="h-4.5 w-4.5" />
-                      Chat with Advisor on WhatsApp
+                      Chat with Expert
                     </a>
 
                     <button

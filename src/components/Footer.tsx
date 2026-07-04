@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { 
   GraduationCap, Phone, Mail, MapPin, Clock, Instagram, Facebook, 
-  Linkedin, ArrowUp, Send, CheckCircle2, MessageSquare, Sparkles 
+  Linkedin, ArrowUp, MessageSquare, Sparkles 
 } from 'lucide-react';
 
 interface FooterProps {
@@ -9,21 +9,8 @@ interface FooterProps {
 }
 
 export default function Footer({ onNavigate }: FooterProps) {
-  const [newsletterEmail, setNewsletterEmail] = useState('');
-  const [newsletterSuccess, setNewsletterSuccess] = useState(false);
-
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!newsletterEmail) return;
-
-    setNewsletterSuccess(true);
-    setTimeout(() => {
-      setNewsletterEmail('');
-    }, 2000);
   };
 
   const contactCards = [
@@ -36,10 +23,10 @@ export default function Footer({ onNavigate }: FooterProps) {
     },
     {
       title: 'Official Email',
-      value: 'admissions@shiftup.in',
+      value: 'arunkumarmoturi744@gmail.com',
       desc: 'Corporate queries & candidate onboarding',
       icon: <Mail className="h-5 w-5 text-[#FDFBF7]" />,
-      href: 'mailto:admissions@shiftup.in'
+      href: 'mailto:arunkumarmoturi744@gmail.com'
     },
     {
       title: 'Academy Location',
@@ -104,36 +91,7 @@ export default function Footer({ onNavigate }: FooterProps) {
             Bridging the gap between traditional academic foundations and active software industry reality. Vijayawada's premiere corporate-led software training ecosystem.
           </p>
 
-          <div className="space-y-2">
-            <h5 className="text-xs font-bold text-slate-300 uppercase tracking-wider">
-              Newsletter Subscription
-            </h5>
-            {!newsletterSuccess ? (
-              <form onSubmit={handleNewsletterSubmit} className="flex gap-2 max-w-sm">
-                <input
-                  type="email"
-                  required
-                  placeholder="Enter email address"
-                  value={newsletterEmail}
-                  onChange={(e) => setNewsletterEmail(e.target.value)}
-                  className="bg-slate-900 border border-slate-800 rounded-none px-4 py-2 text-xs focus:outline-none focus:border-[#FDFBF7] flex-1 text-[#2C241B]"
-                  id="newsletter-email"
-                />
-                <button
-                  type="submit"
-                  className="px-4 py-2 bg-[#FDFBF7] hover:bg-[#FDFBF7] text-[#2C241B] rounded-none text-xs font-bold transition-colors"
-                  id="newsletter-submit-btn"
-                >
-                  <Send className="h-3.5 w-3.5" />
-                </button>
-              </form>
-            ) : (
-              <div className="flex items-center gap-2 text-[#FDFBF7] text-xs font-bold bg-[#FDFBF7]/40 p-2.5 rounded-none border border-[#FDFBF7]/40 w-fit">
-                <CheckCircle2 className="h-4 w-4" />
-                <span>Subscribed! Stay up to date.</span>
-              </div>
-            )}
-          </div>
+
         </div>
 
         {/* Links Area (7 cols) */}
@@ -188,7 +146,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               {/* Instagram link specified in details */}
               <div className="flex gap-2.5 pt-2">
                 <a 
-                  href="https://www.instagram.com/shiftupsoftwareacademy" 
+                  href="https://www.instagram.com/shiftupsoftwareacademy?igsh=MXcyNWZ0NXM3azI0bg==" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="p-1.5 bg-slate-900 hover:bg-slate-800 text-[#FDFBF7] rounded-none transition-colors"
