@@ -208,19 +208,13 @@ export default function Hero({ onNavigate, onOpenSuccessStories }: HeroProps) {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -15 }}
                         transition={{ duration: 0.4 }}
-                        className="flex items-center gap-2"
+                        className="flex flex-col justify-center"
                       >
-                        <img 
-                          src={placementFeeds[activePlacementIndex].avatar} 
-                          alt={placementFeeds[activePlacementIndex].name}
-                          className="w-8 h-8 rounded-none border border-[#E8E0D5] object-cover"
-                          referrerPolicy="no-referrer"
-                        />
                         <div className="leading-tight">
-                          <p className="text-[11px] font-extrabold text-[#2C241B] truncate max-w-[120px]">
+                          <p className="text-[11px] font-extrabold text-[#2C241B] truncate max-w-[140px]">
                             {placementFeeds[activePlacementIndex].name}
                           </p>
-                          <p className="text-[10px] font-semibold text-[#7A6C5D] truncate max-w-[120px]">
+                          <p className="text-[10px] font-semibold text-[#7A6C5D] truncate max-w-[140px]">
                             {placementFeeds[activePlacementIndex].role}
                           </p>
                           <p className="text-[10px] font-bold text-[#4A3F35] mt-0.5">
@@ -272,7 +266,7 @@ export default function Hero({ onNavigate, onOpenSuccessStories }: HeroProps) {
             <motion.div 
               animate={{ y: [0, -8, 0] }}
               transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-              className="absolute -right-6 -bottom-4 bg-[#FDFBF7] border border-[#E8E0D5] px-4 py-3 rounded-none shadow-xl flex items-center gap-3 max-w-[190px]"
+              className="hidden sm:flex absolute -right-6 -bottom-4 bg-[#FDFBF7] border border-[#E8E0D5] px-4 py-3 rounded-none shadow-xl items-center gap-3 max-w-[190px]"
             >
               <div className="p-2 bg-[#EAE4D9] text-[#2C241B] rounded-none">
                 <CheckCircle2 className="h-5 w-5" />
@@ -287,7 +281,7 @@ export default function Hero({ onNavigate, onOpenSuccessStories }: HeroProps) {
             <motion.div 
               animate={{ y: [0, 8, 0] }}
               transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
-              className="absolute -left-6 -top-4 bg-[#FDFBF7] border border-[#E8E0D5] px-4 py-2.5 rounded-none shadow-xl flex items-center gap-2.5 max-w-[170px]"
+              className="hidden sm:flex absolute -left-6 -top-4 bg-[#FDFBF7] border border-[#E8E0D5] px-4 py-2.5 rounded-none shadow-xl items-center gap-2.5 max-w-[170px]"
             >
               <div className="p-1.5 bg-[#EAE4D9] text-[#2C241B] rounded-none">
                 <Sparkles className="h-4 w-4 text-[#2C241B]" />
